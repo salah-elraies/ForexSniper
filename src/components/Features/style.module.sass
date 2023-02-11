@@ -1,0 +1,64 @@
+.features_container
+  padding: 0px 37px 0px 72px
+  margin-top: 200px
+  .subtitle
+    font-weight: 600
+    font-size: 20px
+    line-height: 27px
+    letter-spacing: 0.435em
+    color: #404B69
+    margin-bottom: 10px
+  .title
+    font-weight: 500
+    font-size: 30px
+    line-height: 41px
+    color: #2386C9
+    position: relative
+    margin-bottom: 59px
+    &::after
+      content: ""
+      width: 186px
+      height: 3px
+      background-color: #404B69
+      position: absolute
+      top: calc( 100% + 9px )
+      left: 0
+  .cards_container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .card_container
+      display: flex
+      flex-direction: column
+      background: #FFFFFF
+      border: 0.541512px solid #DBE4E9
+      border-radius: 10.8302px
+      min-width: 254px
+      padding: 10px 14px 20px
+      .card_index
+        font-weight: 800
+        font-size: 11.9133px
+        line-height: 16px
+        color: #000000
+      .card_image_container
+        display: flex
+        justify-content: center
+      .card_title
+        font-weight: 800
+        font-size: 16.2454px
+        line-height: 18px
+        text-align: center
+        letter-spacing: -0.03em
+        color: #000000
+        margin-top: 15px
+@media screen and ( max-width: 1140px )
+  .cards_container
+    justify-content: flex-start !important
+    .card_container
+      margin-right: 20px
+@media screen and ( max-width: 440px )
+  .cards_container
+    justify-content: flex-start !important
+    .card_container
+      margin-right: 0px
+      margin-top: 20px

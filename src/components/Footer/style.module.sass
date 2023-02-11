@@ -1,0 +1,56 @@
+.footer_container
+  margin-top: 400px
+  background: #181C1F
+  padding: 90px 72px 28px
+  .footer_content
+    margin-bottom: 70px
+    display: flex
+    .logo
+      img
+        max-width: 100%
+        object-fit: contain
+    .contact_link
+      font-weight: 400
+      font-size: 20px
+      line-height: 27px
+      color: #EEEEEE
+      display: flex
+      align-items: center
+      text-decoration: none
+      .contact_us
+        display: flex
+        align-items: center
+        margin-right: 13px
+        svg
+          margin-right: 10px
+      .mail
+        font-weight: 600
+        font-size: 20px
+        line-height: 17px
+        color: #EEEEEE
+    .social_icons
+      display: flex
+      justify-content: flex-end
+  .copy_rights
+    text-align: center
+    span
+      font-weight: 400
+      font-size: 17px
+      line-height: 23px
+      color: #FFFFFF
+@media screen and ( max-width: 900px )
+  .footer_container
+    .footer_content
+      .contact_link
+        margin-top: 20px
+        margin-bottom: 20px
+    .social_icons
+      justify-content: center !important
+@media screen and ( max-width: 480px )
+  .footer_container
+    .footer_content
+      .contact_link
+        margin-top: 20px
+        margin-bottom: 20px
+        flex-direction: column
+        align-items: center

@@ -1,0 +1,27 @@
+.symbols_container
+  display: flex
+  flex-direction: column
+  margin-top: 190px
+  .symbols_header_contaienr
+    display: flex
+    flex: 1
+    justify-content: center
+    .symbols_header
+      display: flex
+      align-items: center
+      margin-bottom: 50px
+      span
+        position: relative
+        font-weight: 700
+        font-size: 30px
+        line-height: 41px
+        color: #2386C9
+        margin: 0 16px
+        &::after
+          content: ""
+          position: absolute
+          top: calc( 100% + 13px )
+          left: -50%
+          width: 269px
+          height: 2.71542px
+          border-bottom: 2.71542px dashed #000000

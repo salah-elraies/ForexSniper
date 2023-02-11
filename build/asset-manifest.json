@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f4ab1d73.chunk.css",
+    "main.js": "/static/js/main.2ba4d4d5.chunk.js",
+    "main.js.map": "/static/js/main.2ba4d4d5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e65dd635.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e65dd635.js.map",
+    "static/js/2.1e0d36e8.chunk.js": "/static/js/2.1e0d36e8.chunk.js",
+    "static/js/2.1e0d36e8.chunk.js.map": "/static/js/2.1e0d36e8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f4ab1d73.chunk.css.map": "/static/css/main.f4ab1d73.chunk.css.map",
+    "static/js/2.1e0d36e8.chunk.js.LICENSE.txt": "/static/js/2.1e0d36e8.chunk.js.LICENSE.txt",
+    "static/media/autoTradePins.9ebafed2.svg": "/static/media/autoTradePins.9ebafed2.svg",
+    "static/media/centerPhone.ee29e134.png": "/static/media/centerPhone.ee29e134.png",
+    "static/media/current_version_icon.5173bdda.svg": "/static/media/current_version_icon.5173bdda.svg",
+    "static/media/daily_update_icon.04195672.svg": "/static/media/daily_update_icon.04195672.svg",
+    "static/media/download_section_circle.18c20441.png": "/static/media/download_section_circle.18c20441.png",
+    "static/media/download_section_phone.24583e48.png": "/static/media/download_section_phone.24583e48.png",
+    "static/media/downloads_icon.53a38376.svg": "/static/media/downloads_icon.53a38376.svg",
+    "static/media/facebook_icon.cd035447.svg": "/static/media/facebook_icon.cd035447.svg",
+    "static/media/footer_logo.dfe6a1ed.svg": "/static/media/footer_logo.dfe6a1ed.svg",
+    "static/media/forexSniperLogo.14371e0e.svg": "/static/media/forexSniperLogo.14371e0e.svg",
+    "static/media/friendly_design_icon.eba144bb.svg": "/static/media/friendly_design_icon.eba144bb.svg",
+    "static/media/fully_secured_icon.d7d0ac3b.svg": "/static/media/fully_secured_icon.d7d0ac3b.svg",
+    "static/media/header_background.bf343aa4.png": "/static/media/header_background.bf343aa4.png",
+    "static/media/leftPhone.b311ea27.png": "/static/media/leftPhone.b311ea27.png",
+    "static/media/push_notification_icon.8f77b413.svg": "/static/media/push_notification_icon.8f77b413.svg",
+    "static/media/quick_access_icon.bb11c1b4.svg": "/static/media/quick_access_icon.bb11c1b4.svg",
+    "static/media/rightPhone.3f5ed412.png": "/static/media/rightPhone.3f5ed412.png",
+    "static/media/support_resistance_side_icons.4de4febf.svg": "/static/media/support_resistance_side_icons.4de4febf.svg",
+    "static/media/sympolsMoneyIcon.a9184ca9.svg": "/static/media/sympolsMoneyIcon.a9184ca9.svg",
+    "static/media/votes_icon.add30206.svg": "/static/media/votes_icon.add30206.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e65dd635.js",
+    "static/js/2.1e0d36e8.chunk.js",
+    "static/css/main.f4ab1d73.chunk.css",
+    "static/js/main.2ba4d4d5.chunk.js"
+  ]
+}

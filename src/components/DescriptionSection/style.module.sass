@@ -1,0 +1,75 @@
+.description_container
+  margin-top: 150px
+  padding: 0px 37px 0px 72px
+  .image_container
+    display: flex
+    justify-content: flex-end
+    &.is_even
+      justify-content: center
+    > div[data-count=three]
+      img
+        width: 33.3%
+        object-fit: contain
+        &:nth-of-type(1)
+          transform: scale(0.94)
+        &:nth-of-type(3)
+          transform: scale(0.94)
+    > div[data-count=one]
+      width: 275px
+      height: 275px
+      border-radius: 50%
+      background: linear-gradient(246.49deg, #F2F2F2 -95.75%, #E6F5FF 131.17%)
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 120px
+        object-fit: contain
+  @media screen and ( max-width: 900px )
+    &.is_even
+      flex-direction: column-reverse
+    .image_container
+      justify-content: center
+      margin-top: 20px
+  .data_contaienr
+    display: flex
+    flex-direction: column
+    .subtitle
+      font-weight: 600
+      font-size: 20px
+      line-height: 27px
+      letter-spacing: 0.435em
+      color: #404B69
+      margin-bottom: 10px
+    .title
+      font-weight: 500
+      font-size: 30px
+      line-height: 41px
+      color: #2386C9
+      position: relative
+      margin-bottom: 29px
+      &::after
+        content: ""
+        width: 186px
+        height: 3px
+        background-color: #404B69
+        position: absolute
+        top: calc( 100% + 9px )
+        left: 0
+    .body
+      font-weight: 400
+      font-size: 20px
+      line-height: 200.68%
+      color: #686868
+    a
+      padding: 22px 18px
+      font-weight: 600
+      font-size: 25px
+      line-height: 16px
+      text-align: center
+      color: #2386C9
+      border: 2px solid #2386C9
+      border-radius: 20px
+      text-decoration: none
+      margin-top: 20px
+      max-width: 200px
