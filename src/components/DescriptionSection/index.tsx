@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 import styles from "./style.module.sass";
 
 export default function DescriptionSection({
@@ -50,7 +49,7 @@ export default function DescriptionSection({
             <Typography variant="body1" className={styles.body}>
               {body}
             </Typography>
-            {ankor ? <Link to={ankor}>{ankorText}</Link> : null}
+            {ankor ? <a href={ankor}>{ankorText}</a> : null}
           </Grid>
         </>
       ) : (
@@ -65,7 +64,7 @@ export default function DescriptionSection({
             <Typography variant="body1" className={styles.body}>
               {body}
             </Typography>
-            {ankor ? <Link to={ankor}>{ankorText}</Link> : null}
+            {ankor ? <a href={ankor}>{ankorText}</a> : null}
           </Grid>
           <Grid
             xs={12}
