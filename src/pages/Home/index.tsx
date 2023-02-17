@@ -2,9 +2,9 @@ import DescriptionSection from "components/DescriptionSection";
 import Header from "components/Header";
 import Nav from "components/Nav";
 import styles from "./style.module.sass";
-import leftPhone from "assets/images/leftPhone.png";
-import centerPhone from "assets/images/centerPhone.png";
-import rightPhone from "assets/images/rightPhone.png";
+// import leftPhone from "assets/images/leftPhone.png";
+// import centerPhone from "assets/images/centerPhone.png";
+// import rightPhone from "assets/images/rightPhone.png";
 import autoTradePins from "assets/images/autoTradePins.svg";
 import Symbols from "components/Symbols";
 import Features from "components/Features";
@@ -12,33 +12,123 @@ import SupportResistance from "components/SupportResistance";
 import StatusCards from "components/StatusCards";
 import Download from "components/Download";
 import Footer from "components/Footer";
+import { useEffect, useReducer } from "react";
+import axios from "axios";
+
+type DescriptionType = {
+  data: {
+    title1: string;
+    sub_title1: string;
+    description1: string;
+    right_img: string;
+    center_img: string;
+    left_img: string;
+    title2: string;
+    sub_title2: string;
+    description2: string;
+  };
+  loading: boolean;
+  error: { code: number; message: string };
+};
+const initDescription: DescriptionType = {
+  data: {
+    title1: "",
+    sub_title1: "",
+    description1: "",
+    right_img: "",
+    center_img: "",
+    left_img: "",
+    title2: "",
+    sub_title2: "",
+    description2: "",
+  },
+  error: { code: 0, message: "" },
+  loading: false,
+};
 
 export default function Home() {
+  const [DescriptionSectionState, Dispatch]: [
+    DescriptionType,
+    React.Dispatch<{
+      type: string;
+      payload: any;
+    }>
+  ] = useReducer(descriptionReducer, initDescription);
+  function descriptionReducer(
+    state: DescriptionType,
+    { type, payload }: { type: string; payload: any }
+  ) {
+    switch (type) {
+      case "LOADING":
+        return {
+          ...state,
+          loading: payload,
+        };
+      case "ERROR":
+        return {
+          ...state,
+          error: payload,
+        };
+      case "DATA":
+        return {
+          ...state,
+          data: payload,
+          loading: false,
+          error: { code: 0, message: "" },
+        };
+
+      default:
+        return state;
+    }
+  }
+  useEffect(() => {
+    axios
+      .get("https://forexsniper.net/forexWebApi/blockOne.php")
+      .then(({ data }: any) => {
+        Dispatch({ type: "DATA", payload: data.data });
+      })
+      .catch((err) => {
+        Dispatch({
+          type: "ERROR",
+          payload: { code: err.code, message: err.message },
+        });
+      });
+  }, []);
   return (
     <>
       <Nav />
       <Header />
       <DescriptionSection
-        subtitle="Support & Resistance"
-        title="Forex Sniper"
-        body={`Received notification when support or resistance happens to Trading on the support and resistance in the Forex marketHere in the program we will send you a message when every support or resistance observed by "Sniper" This will make you feel all the movements of the market and that on 28 pairs of Currency + gold and petroleum.`}
-        ankor="#download_app"
+        subtitle={DescriptionSectionState.data.sub_title1}
+        title={DescriptionSectionState.data.title1}
+        body={DescriptionSectionState.data.description1}
         key={0}
-        ankorText="Download"
         image={
           <div className={styles.mobiles_image} data-count="three">
-            <img src={leftPhone} alt="leftPhone" loading="lazy" />{" "}
-            <img src={centerPhone} alt="centerPhone" loading="lazy" />{" "}
-            <img src={rightPhone} alt="rightPhone" loading="lazy" />
+            <img
+              src={DescriptionSectionState.data.left_img}
+              alt="leftPhone"
+              loading="lazy"
+            />{" "}
+            <img
+              src={DescriptionSectionState.data.center_img}
+              alt="centerPhone"
+              loading="lazy"
+            />{" "}
+            <img
+              src={DescriptionSectionState.data.left_img}
+              alt="rightPhone"
+              loading="lazy"
+            />
           </div>
         }
       />
       <DescriptionSection
         key={1}
         isEven={true}
-        subtitle="How To Trade"
-        title="Auto trade today"
-        body={`It is a tool in application with smart features allowing you to trade on forex platform with sufficient and responsive mechanisms.it can't perform solely as decision will differ from user to another based on their trading experience. We are will help you and didn’t trading behalf of you.`}
+        subtitle={DescriptionSectionState.data.sub_title2}
+        title={DescriptionSectionState.data.title2}
+        body={DescriptionSectionState.data.description2}
         ankor=""
         ankorText=""
         image={

@@ -1,8 +1,9 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import styles from "./style.module.sass";
 import download_section_circle from "assets/images/download_section_circle.png";
 import download_section_phone from "assets/images/download_section_phone.png";
 import get_it_on_play from "assets/images/get_it_on_play.png";
+import qrcode from "assets/images/qrcode.png";
 
 export default function Download() {
   return (
@@ -34,12 +35,28 @@ export default function Download() {
           </Typography>
         </Grid>
         <Grid className={styles.btns_section}>
-          <img
-            src={get_it_on_play}
-            alt="google play"
-            loading="lazy"
-            className={styles.get_it_on_play}
-          />
+          <Box>
+            <img
+              src={qrcode}
+              alt="qrcode"
+              loading="lazy"
+              className={styles.qrcode}
+            />
+          </Box>
+        </Grid>
+        <Grid className={styles.btns_section}>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <img
+              src={get_it_on_play}
+              alt="google play"
+              loading="lazy"
+              className={styles.get_it_on_play}
+            />
+          </a>
         </Grid>
       </Grid>
     </Grid>

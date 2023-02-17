@@ -3,6 +3,7 @@ import styles from "./style.module.sass";
 import footer_logo from "assets/images/footer_logo.svg";
 import { ReactComponent as FacebookIcon } from "assets/images/facebook_icon.svg";
 import { FaRegEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -31,15 +32,25 @@ export default function Footer() {
             className={styles.contact_link}
           >
             <Typography variant="subtitle1" className={styles.contact_us}>
-              <FaRegEnvelope /> Contact Us :
+              <FaRegEnvelope />
+              &nbsp;Contact&nbsp;Us&nbsp;:
             </Typography>
             <Typography variant="subtitle2" className={styles.mail}>
               support@forexsniper.net
             </Typography>
           </a>
+          <Link className={styles.contact_link} to="/privacy-policy">
+            Privacy And Policy
+          </Link>
         </Grid>
         <Grid className={styles.social_icons} item xs={12} md={3}>
-          <FacebookIcon />
+          <a
+            href="https://www.facebook.com/profile.php?id=100064007257025&mibextid=ZbWKwL"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FacebookIcon />
+          </a>
         </Grid>
       </Grid>
       <Grid className={styles.copy_rights}>

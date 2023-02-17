@@ -17,11 +17,17 @@ export default function Header() {
         <Typography variant="body1">
           Real time notification <br />
           include D1/H4 charts analysis <br />
-          You will never miss support or resistance , within a time frame (4
-          Hours + 1 Day). you will keep in touch of the market all the time ,
-          when you used our app
+          You will never miss support or resistance - Our Expert Advisor is an
+          unique & creative application in Forex trading With the ability to
+          trade with 28 symbol of currencies.
         </Typography>
-        <a href="#download_app">Download</a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance_pro"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Download
+        </a>
       </Box>
     </Grid>
   );
