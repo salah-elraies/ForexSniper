@@ -1,7 +1,7 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Pagination, Typography } from "@mui/material";
 import styles from "./style.module.sass";
 import support_resistance_side_icons from "assets/images/support_resistance_side_icons.svg";
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 
 type SupportResistanceState = {
@@ -18,6 +18,7 @@ type SupportResistanceState = {
   }[];
   total_items_page: number;
   total_count: number;
+  total_pages: number;
 };
 const initSupport: SupportResistanceState = {
   loading: false,
@@ -25,8 +26,10 @@ const initSupport: SupportResistanceState = {
   data: [],
   total_count: 0,
   total_items_page: 1,
+  total_pages: 1,
 };
 export default function SupportResistance() {
+  const [page, setPage] = useState(1);
   const [supportState, Dispatch]: [
     SupportResistanceState,
     React.Dispatch<{
@@ -55,6 +58,7 @@ export default function SupportResistance() {
           data: payload.data,
           total_count: payload.total_count,
           total_items_page: payload.total_items_page,
+          total_pages: payload.total_pages,
           loading: false,
           error: { code: 0, message: "" },
         };
@@ -65,7 +69,9 @@ export default function SupportResistance() {
   }
   useEffect(() => {
     axios
-      .get("https://forexsniper.net/forexWebApi/supportRresistance.php")
+      .get(
+        `https://forexsniper.net/forexWebApi/supportRresistance.php?page=${page}`
+      )
       .then(({ data }: any) => {
         Dispatch({
           type: "DATA",
@@ -73,8 +79,10 @@ export default function SupportResistance() {
             data: data.data,
             total_count: data.total_count,
             total_items_page: data.total_items_page,
+            total_pages: Math.ceil(data.total_count / 10),
           },
         });
+        console.log(data.total_count / 10);
       })
       .catch((err) => {
         Dispatch({
@@ -82,8 +90,8 @@ export default function SupportResistance() {
           payload: { code: err.code, message: err.message },
         });
       });
-  }, []);
-
+  }, [page]);
+  console.log(supportState.total_pages);
   return (
     <Grid
       className={styles.support_container}
@@ -111,6 +119,7 @@ export default function SupportResistance() {
         justifyContent={"center"}
         alignItems="center"
         maxWidth="100%"
+        className={styles.table_parent}
       >
         <Grid className={styles.table_container}>
           <Grid className={styles.table_header}>
@@ -168,6 +177,12 @@ export default function SupportResistance() {
               </Grid>
             ))}
           </Grid>
+          <Pagination
+            count={supportState.total_pages}
+            page={page || 1}
+            onChange={(_, myPage) => setPage(myPage)}
+            className={styles.pagination}
+          />
         </Grid>
       </Grid>
     </Grid>
