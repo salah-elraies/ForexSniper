@@ -71,7 +71,7 @@ export default function StatusCards() {
   }
   useEffect(() => {
     axios
-      .get("https://forexsniper.net/forexWebApi/statistics.php")
+      .get("/forexWebApi/statistics.php")
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })
