@@ -19,6 +19,9 @@ export default function DescriptionSection({
   isEven?: boolean;
   image: ReactNode;
 }) {
+  function createMarkup() {
+    return { __html: body };
+  }
   return (
     <Grid
       container
@@ -46,9 +49,13 @@ export default function DescriptionSection({
             <Typography variant="h4" className={styles.title}>
               {title}
             </Typography>
-            <Typography variant="body1" className={styles.body}>
-              {body}
-            </Typography>
+            <Typography
+              variant="body1"
+              className={styles.body}
+              dangerouslySetInnerHTML={createMarkup()}
+            />
+            {/* {body} */}
+            {/* </Typography> */}
             {ankor ? <a href={ankor}>{ankorText}</a> : null}
           </Grid>
         </>
