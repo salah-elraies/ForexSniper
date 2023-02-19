@@ -83,7 +83,7 @@ export default function Home() {
   }
   useEffect(() => {
     axios
-      .get("https://forexsniper.net/forexWebApi/blockOne.php")
+      .get("/forexWebApi/blockOne.php")
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })
