@@ -26,7 +26,7 @@ const initSupport: SupportResistanceState = {
   data: [],
   total_count: 0,
   total_items_page: 1,
-  total_pages: 1,
+  total_pages: 5,
 };
 export default function SupportResistance() {
   const [page, setPage] = useState(1);
@@ -77,10 +77,9 @@ export default function SupportResistance() {
             data: data.data,
             total_count: data.total_count,
             total_items_page: data.total_items_page,
-            total_pages: Math.ceil(data.total_count / 10),
+            total_pages: 5,
           },
         });
-        console.log(data.total_count / 10);
       })
       .catch((err) => {
         Dispatch({
@@ -89,7 +88,6 @@ export default function SupportResistance() {
         });
       });
   }, [page]);
-  console.log(supportState.total_pages);
   return (
     <Grid
       className={styles.support_container}

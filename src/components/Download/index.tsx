@@ -46,7 +46,7 @@ export default function Download() {
         </Grid>
         <Grid className={styles.btns_section}>
           <a
-            href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance"
+            href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance_pro"
             rel="noreferrer"
             target="_blank"
           >
@@ -55,6 +55,20 @@ export default function Download() {
               alt="google play"
               loading="lazy"
               className={styles.get_it_on_play}
+            />
+          </a>
+        </Grid>
+        <Grid className={styles.btns_section}>
+          <a
+            href="https://icmarkets.com/?camp=51601"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              alt="lol"
+              className={styles.img_fluid}
+              src="https://promo.icmarkets.com/Logos/2021/400x110/BAN_ICM_black_400x110.png"
+              loading="lazy"
             />
           </a>
         </Grid>

@@ -5,7 +5,8 @@ import push_notification_icon from "assets/images/push_notification_icon.svg";
 import quick_access_icon from "assets/images/quick_access_icon.svg";
 import friendly_design_icon from "assets/images/friendly_design_icon.svg";
 import fully_secured_icon from "assets/images/fully_secured_icon.svg";
-import daily_update_icon from "assets/images/daily_update_icon.svg";
+// import daily_update_icon from "assets/images/daily_update_icon.svg";
+import expert_op_icon from "assets/images/expert_op_icon.jpeg";
 
 export default function Features() {
   return (
@@ -44,8 +45,8 @@ export default function Features() {
         />
         <FeatureCard
           index={"05"}
-          image={daily_update_icon}
-          title="Daily Update"
+          image={expert_op_icon}
+          title="Expert advisor"
         />
       </Grid>
     </Grid>

@@ -17,12 +17,12 @@ export default function Header() {
         <Typography variant="body1">
           Real time notification <br />
           include D1/H4 charts analysis <br />
-          You will never miss support or resistance - Our Expert Advisor is an
-          unique & creative application in Forex trading With the ability to
+          You will never miss support or resistance <br /> Our Expert Advisor is
+          an unique & creative application in Forex trading With the ability to
           trade with 28 symbol of currencies.
         </Typography>
         <a
-          href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance_pro"
+          href="https://play.google.com/store/apps/details?id=com.youseforex.support_and_restincance"
           target="_blank"
           rel="noreferrer"
         >

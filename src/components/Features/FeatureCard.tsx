@@ -11,7 +11,11 @@ export default function FeatureCard({
   title: string;
 }) {
   return (
-    <Grid className={styles.card_container}>
+    <Grid
+      className={`${styles.card_container} ${
+        styles[title.replace(" ", "_").toLowerCase()]
+      }`}
+    >
       <Typography variant="caption" className={styles.card_index}>
         {index}
       </Typography>
