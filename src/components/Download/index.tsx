@@ -4,6 +4,7 @@ import download_section_circle from "assets/images/download_section_circle.png";
 import download_section_phone from "assets/images/download_section_phone.png";
 import get_it_on_play from "assets/images/get_it_on_play.png";
 import qrcode from "assets/images/qrcode.png";
+import icmarkets from "assets/images/icmarkets.png";
 
 export default function Download() {
   return (
@@ -67,7 +68,7 @@ export default function Download() {
             <img
               alt="lol"
               className={styles.img_fluid}
-              src="https://promo.icmarkets.com/Logos/2021/400x110/BAN_ICM_black_400x110.png"
+              src={icmarkets}
               loading="lazy"
             />
           </a>

@@ -16,14 +16,21 @@
           transform: scale(0.94)
     > div[data-count=one]
       width: 275px
-      height: 275px
-      border-radius: 50%
-      background: linear-gradient(246.49deg, #F2F2F2 -95.75%, #E6F5FF 131.17%)
+      height: 500px
+      overflow: hidden
+      // background: linear-gradient(246.49deg, #F2F2F2 -95.75%, #E6F5FF 131.17%)
       display: flex
       justify-content: center
       align-items: center
+      perspective-origin: top center
+      perspective: 500px
+      position: relative
       img
-        width: 120px
+        position: relative
+        top: 170px
+        left: 0
+        // width: 120px
+        width: 100%
         object-fit: contain
   @media screen and ( max-width: 900px )
     &.is_even

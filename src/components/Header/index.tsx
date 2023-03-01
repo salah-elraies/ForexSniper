@@ -26,7 +26,7 @@ export default function Header() {
           target="_blank"
           rel="noreferrer"
         >
-          Download
+          Download Trial App
         </a>
       </Box>
     </Grid>

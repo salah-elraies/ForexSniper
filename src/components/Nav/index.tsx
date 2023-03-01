@@ -55,19 +55,19 @@ export default function Nav() {
               <Typography variant="caption">Support & Resistance</Typography>
             </a>
             <a
-              href="#app_screenshots"
+              href="#download_trial"
               onClick={() => handleClickLink("support")}
               className={isActive === "support" ? styles.active : ""}
             >
               <Typography variant="caption">App Screenshots</Typography>
             </a>
-            <a
+            {/* <a
               href="#download_trial"
               onClick={() => handleClickLink("download_trial")}
               className={isActive === "download_trial" ? styles.active : ""}
             >
               <Typography variant="caption">Download trial App</Typography>
-            </a>
+            </a> */}
             <a
               href="#download_app"
               onClick={() => handleClickLink("download_app")}
@@ -112,19 +112,19 @@ export default function Nav() {
                 <Typography variant="caption">Support & Resistance</Typography>
               </a>
               <a
-                href="#app_screenshots"
+                href="#download_trial"
                 onClick={() => handleClickLink("support")}
                 className={isActive === "support" ? styles.active : ""}
               >
                 <Typography variant="caption">App Screenshots</Typography>
               </a>
-              <a
+              {/* <a
                 href="#download_trial"
                 onClick={() => handleClickLink("download_trial")}
                 className={isActive === "download_trial" ? styles.active : ""}
               >
                 <Typography variant="caption">Download trial App</Typography>
-              </a>
+              </a> */}
               <a
                 href="#download_app"
                 onClick={() => handleClickLink("download_app")}

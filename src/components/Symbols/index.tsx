@@ -61,7 +61,13 @@ export default function Symbols() {
   }
   useEffect(() => {
     axios
-      .get("/forexWebApi/symbols.php")
+      .get(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "https://forexsniper.net"
+            : ""
+        }/forexWebApi/symbols.php`
+      )
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })

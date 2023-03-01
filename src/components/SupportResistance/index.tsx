@@ -69,7 +69,13 @@ export default function SupportResistance() {
   }
   useEffect(() => {
     axios
-      .get(`/forexWebApi/supportRresistance.php?page=${page}`)
+      .get(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "https://forexsniper.net"
+            : ""
+        }/forexWebApi/supportRresistance.php?page=${page}`
+      )
       .then(({ data }: any) => {
         Dispatch({
           type: "DATA",

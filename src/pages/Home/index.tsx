@@ -5,7 +5,7 @@ import styles from "./style.module.sass";
 // import leftPhone from "assets/images/leftPhone.png";
 // import centerPhone from "assets/images/centerPhone.png";
 // import rightPhone from "assets/images/rightPhone.png";
-import autoTradePins from "assets/images/autoTradePins.svg";
+import autoTradePins from "assets/images/how_to_trade.png";
 import Symbols from "components/Symbols";
 import Features from "components/Features";
 import SupportResistance from "components/SupportResistance";
@@ -83,7 +83,13 @@ export default function Home() {
   }
   useEffect(() => {
     axios
-      .get("/forexWebApi/blockOne.php")
+      .get(
+        `${
+          process.env.NODE_ENV === "development"
+            ? "https://forexsniper.net"
+            : ""
+        }/forexWebApi/blockOne.php`
+      )
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })
