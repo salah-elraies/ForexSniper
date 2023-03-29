@@ -82,14 +82,13 @@ export default function Home() {
     }
   }
   useEffect(() => {
+    // ${
+    //   process.env.NODE_ENV === "development"
+    //     ? "https://forexsniper.net"
+    //     : ""
+    // }
     axios
-      .get(
-        `${
-          process.env.NODE_ENV === "development"
-            ? "https://forexsniper.net"
-            : ""
-        }/forexWebApi/blockOne.php`
-      )
+      .get(`/forexWebApi/blockOne.php`)
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })
@@ -122,7 +121,7 @@ export default function Home() {
               loading="lazy"
             />{" "}
             <img
-              src={DescriptionSectionState.data.left_img}
+              src={DescriptionSectionState.data.right_img}
               alt="rightPhone"
               loading="lazy"
             />

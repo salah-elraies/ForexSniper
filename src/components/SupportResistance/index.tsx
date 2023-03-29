@@ -68,14 +68,13 @@ export default function SupportResistance() {
     }
   }
   useEffect(() => {
+    // ${
+    //     process.env.NODE_ENV === "development"
+    //     ? "https://forexsniper.net"
+    //     : ""
+    // }
     axios
-      .get(
-        `${
-          process.env.NODE_ENV === "development"
-            ? "https://forexsniper.net"
-            : ""
-        }/forexWebApi/supportRresistance.php?page=${page}`
-      )
+      .get(`/forexWebApi/supportRresistance.php?page=${page}`)
       .then(({ data }: any) => {
         Dispatch({
           type: "DATA",
@@ -126,9 +125,6 @@ export default function SupportResistance() {
         <Grid className={styles.table_container}>
           <Grid className={styles.table_header}>
             <Box>
-              <Typography variant="caption">#</Typography>
-            </Box>
-            <Box>
               <Typography variant="caption">Symbol</Typography>
             </Box>
             <Box>
@@ -155,9 +151,6 @@ export default function SupportResistance() {
                 }`}
                 key={row.ID}
               >
-                <Box>
-                  <Typography variant="caption">{row.ID}</Typography>
-                </Box>
                 <Box>
                   <Typography variant="caption">{row.Symbol}</Typography>
                 </Box>

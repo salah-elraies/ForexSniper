@@ -59,12 +59,36 @@
     display: flex
     justify-content: flex-start
   .card_image_container
+    margin-bottom: 12px
     display: flex
     justify-content: center
     max-width: 140px
     img
       width: 100%
       object-fit: contain
+.accurate_action
+  align-items: center
+  .card_index
+    width: 100%
+    display: flex
+    justify-content: flex-start
+  .card_image_container
+    // margin-bottom: 8px
+    display: flex
+    justify-content: center
+    width: 120px
+    background: linear-gradient(246.49deg, #F2F2F2 -95.75%, #E6F5FF 131.17%)
+    height: 120px
+    border-radius: 50%
+    align-items: center
+    img
+      height: 80%
+      object-fit: contain
+@media screen and ( min-width: 1200px )
+  .cards_container
+    justify-content: center !important
+    .card_container
+      margin-right: 20px
 @media screen and ( max-width: 1140px )
   .cards_container
     justify-content: flex-start !important

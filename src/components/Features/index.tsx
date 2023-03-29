@@ -2,8 +2,8 @@ import { Grid, Typography } from "@mui/material";
 import FeatureCard from "./FeatureCard";
 import styles from "./style.module.sass";
 import push_notification_icon from "assets/images/push_notification_icon.svg";
-import quick_access_icon from "assets/images/quick_access_icon.svg";
-import friendly_design_icon from "assets/images/friendly_design_icon.svg";
+import quick_access_icon from "assets/images/autoTradePins.svg";
+// import friendly_design_icon from "assets/images/friendly_design_icon.svg";
 import fully_secured_icon from "assets/images/fully_secured_icon.svg";
 // import daily_update_icon from "assets/images/daily_update_icon.svg";
 import expert_op_icon from "assets/images/expert_op_icon.jpeg";
@@ -31,20 +31,20 @@ export default function Features() {
         <FeatureCard
           index={"02"}
           image={quick_access_icon}
-          title="Quick Access"
+          title="Accurate Action"
         />
-        <FeatureCard
+        {/* <FeatureCard
           index={"03"}
           image={friendly_design_icon}
           title="Friendly Design"
-        />
+        /> */}
         <FeatureCard
-          index={"04"}
+          index={"03"}
           image={fully_secured_icon}
           title="Fully Secured"
         />
         <FeatureCard
-          index={"05"}
+          index={"04"}
           image={expert_op_icon}
           title="Expert advisor"
         />

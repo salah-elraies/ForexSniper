@@ -70,14 +70,13 @@ export default function StatusCards() {
     }
   }
   useEffect(() => {
+    // ${
+    //     process.env.NODE_ENV === "development"
+    //     ? "https://forexsniper.net"
+    //     : ""
+    // }
     axios
-      .get(
-        `${
-          process.env.NODE_ENV === "development"
-            ? "https://forexsniper.net"
-            : ""
-        }/forexWebApi/statistics.php`
-      )
+      .get(`/forexWebApi/statistics.php`)
       .then(({ data }: any) => {
         Dispatch({ type: "DATA", payload: data.data });
       })
